@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Poppins, sans-serif;
+  --font-cabinet: "Cabinet Grotesk";
+}
+
+@layer components {
+  .bg-theme {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900 dark:bg-none dark:bg-black dark:text-white;
+  }
+
+  .bg-theme-foreground {
+    @apply bg-white/50 dark:bg-black/70;
+  }
+
+  .border-theme {
+    @apply border-gray-400 dark:border-white/16;
+  }
+}
